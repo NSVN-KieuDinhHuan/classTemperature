@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Temperature.html</title>
+</head>
+<body>
+<script>
+    let temperature=function (degreeC){
+        this.degreeC=degreeC;
+        this.setTemperature=function (degreeC){
+            this.degreeC=degreeC;
+        }
+        this.convertDegreeF=function () {
+            return  9*this.degreeC/5 +32
+        }
+        this.convertKevin=function () {
+            return this.degreeC+273
+        }
+    }
+    let temperature1=new temperature();
+    temperature1.setTemperature(25);
+    document.write("Độ F là" + temperature1.convertDegreeF())
+    document.write("<br>");
+    document.write("Độ kelvin là "+temperature1.convertKevin())
+</script>
+</body>
+</html>
